@@ -1,0 +1,8 @@
+typer
+tqdm
+joblib
+pandas
+requests
+tenacity
+selenium
+beautifulsoup4
