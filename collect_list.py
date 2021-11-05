@@ -34,7 +34,7 @@ def main(output_path: str = "cache/listings.jbl", max_pages: int = 10, quiet: bo
     for i in range(max_pages):
         print(f"Page {i+1}")
         soup = BeautifulSoup(browser.page_source, "lxml")
-        for item in soup.find_all("ul", attrs={"class": "listInfo"}):
+        for item in soup.find_all("section", attrs={"class": "vue-list-rent-item"})
             link = item.find("a")
             listings.append(link.attrs["href"].split("-")[-1].split(".")[0])
         browser.find_element_by_class_name('pageNext').click()
