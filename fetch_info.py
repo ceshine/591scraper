@@ -48,8 +48,13 @@ def retry_condition(exception):
     stop=stop_after_attempt(5), wait=wait_fixed(10),
     before_sleep=before_sleep_log(LOGGER, logging.INFO))
 def get_page(listing_id):
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+    }
     res = requests.get(
-        f"https://rent.591.com.tw/rent-detail-{listing_id}.html")
+        f"https://rent.591.com.tw/rent-detail-{listing_id}.html",
+        allow_redirects=False, headers=headers
+    )
     assert res.status_code == 200
     return res.text
 
