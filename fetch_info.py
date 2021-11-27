@@ -169,8 +169,6 @@ def main(
     df_new["link"] = (
         "https://rent.591.com.tw/rent-detail-" + df_new["id"].astype("str") + ".html"
     )
-    if "mark" not in df_new:
-        df_new["mark"] = ""
     column_ordering = [
         "mark",
         "title",

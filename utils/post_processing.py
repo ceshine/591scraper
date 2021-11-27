@@ -10,6 +10,7 @@ def parse_price(price_str: str) -> int:
 
 
 def auto_marking_(df: pd.DataFrame) -> pd.DataFrame:
+    df["mark"] = ""
     social = (
         df.title.str.contains("社宅")
         | df.title.str.contains("社會住宅")
