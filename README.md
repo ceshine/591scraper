@@ -2,6 +2,14 @@
 
 MIT LICENSE 開源，希望能幫助到有需要的人
 
+## Changelog
+
+### 2021-12-17
+
+- 針對 591 網站界面更新進行修改。感謝 [haruzheng 回報](https://github.com/ceshine/591scraper/issues/1)。
+- 依據新版界面修正 `collect_list.py`。
+- 新版界面由於使用 JS rendering，我們不再能直接使用 requests 抓取物件詳情頁面，所以 `fetch_info.py` 腳本已經改用 Selenium，抓取速度會慢一些。
+
 ## 使用說明
 
 ### Prerequisites
