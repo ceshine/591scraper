@@ -74,7 +74,7 @@ def navigate_to_a_page(browser: webdriver.Chrome, url: str):
 
     # For debugging purposes
     with open("/tmp/ramdisk/tmp.html", "w") as fout:
-        fout.write(browser.page_source)
+        _ = fout.write(browser.page_source)
 
 
 def main(output_path: str = "cache/listings.jbl", max_pages: int = 10, quiet: bool = False):
