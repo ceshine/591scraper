@@ -124,13 +124,14 @@ def main(output_path: str = "cache/listings.jbl", max_pages: int = 10, quiet: bo
         # An alternative approach: Click the next page link using Selenium
         # browser.find_element(By.LINK_TEXT, "下一頁").click()
 
-    print(listings)
     joblib.dump(list(listings), output_path)
     print(f"Done! Collected {len(listings)} entries.")
 
     # Uncomment to pause before closing the browser
     # import time
     # time.sleep(10)
+
+    browser.quit()
 
 
 if __name__ == "__main__":
