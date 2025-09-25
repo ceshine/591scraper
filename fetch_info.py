@@ -52,8 +52,8 @@ def navigate_to_a_page(browser: webdriver.Chrome, url: str):
     time.sleep(random.random() * 5 + 1)
 
     # For debugging purposes
-    with open("/tmp/ramdisk/tmp.html", "w") as fout:
-        _ = fout.write(browser.page_source)
+    # with open("/tmp/ramdisk/tmp.html", "w") as fout:
+    #     _ = fout.write(browser.page_source)
 
 
 class NotExistException(Exception):

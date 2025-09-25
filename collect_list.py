@@ -73,8 +73,8 @@ def navigate_to_a_page(browser: webdriver.Chrome, url: str):
         typer.echo("Next page link not found, proceeding anyway (might be a single page result).")
 
     # For debugging purposes
-    with open("/tmp/ramdisk/tmp.html", "w") as fout:
-        _ = fout.write(browser.page_source)
+    # with open("/tmp/ramdisk/tmp.html", "w") as fout:
+    #     _ = fout.write(browser.page_source)
 
 
 def main(output_path: str = "cache/listings.jbl", max_pages: int = 10, quiet: bool = False):
