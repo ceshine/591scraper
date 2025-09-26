@@ -45,7 +45,7 @@ uv sync --frozen
 
 首先將 591 搜尋頁面的網址存到 `X591URL` 環境變數，範例 (Bash):
 
-````bash
+```bash
 export X591URL="https://rent.591.com.tw/?kind=1&order=money&orderType=asc&region=17&rentprice=10000,18000&other=lift"
 ```
 
